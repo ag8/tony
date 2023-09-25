@@ -4,7 +4,7 @@
 
 1. Download `fixit.sh`:
 
-``
+`wget https://raw.githubusercontent.com/ag8/tony/main/fixit.sh`
 
 2. Add the following to your `.bashrc` file:
 
@@ -21,3 +21,12 @@ tony() {
   ~/fixit.sh "$LAST_CMD" "$CMD_OUTPUT"
 }
 ```
+
+3. Make sure your `OPENAI_API_KEY` environment variable is set
+
+4. `source .bashrc`
+
+## Usage
+
+Got problems? Ask tony!
+
