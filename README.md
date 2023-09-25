@@ -36,7 +36,7 @@ Got problems? Ask tony!
 
 You can also add your own additional information:
 
-![alt text](https://github.com/ag8/tony/blob/main/with-opt.png?raw=true)
+![alt text](https://github.com/ag8/tony/blob/main/with_opt.png?raw=true)
 
 ## English is the programming language of the future
 
