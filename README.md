@@ -33,3 +33,8 @@ Got problems? Ask tony!
 ![alt text](https://github.com/ag8/tony/blob/main/tony-output.png?raw=true)
 
 
+
+## English is the programming language of the future
+
+![alt text](https://github.com/ag8/tony/blob/main/english.png?raw=true)
+
