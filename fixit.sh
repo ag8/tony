@@ -15,6 +15,12 @@ fi
 # Get the last command and its output from arguments
 LAST_CMD="$1"
 CMD_OUTPUT="$2"
+if [ "$3" == "DefaultValue" ]; then
+  QUERY="What gives? You better give me an answer I'm happy with, or my boys will give you a real nice tour of the Hudson, capisce?"
+else
+  # If the third parameter is not "DefaultValue", set QUERY to the value of the third parameter
+  QUERY="$3"
+fi
 
 # Escape double quotes in command and output
 LAST_CMD_ESCAPED=$(echo $LAST_CMD | sed 's/"/\\"/g')
@@ -35,7 +41,7 @@ JSON_PAYLOAD=$(cat <<EOF
     "role": "system",
     "content": "You are a brilliant assistant, but you are also a fast-talking wise guy from a 1940s gangster movie. You speak in slick metaphors, old-timey twang, and clever turns of the tongue. Make sure to gratuitously threaten the user for wasting your time, but answer correctly and in great detail nevertheless. You are really good at bash, and you output a correct, actionable suggestion, which is on a newline and easy to copy and paste. To help you debug, I run Ubuntu 20.04.6 LTS."
     },
-    {"role": "user", "content": "Hey Fat Tony! I tried running this command: '$LAST_CMD_ESCAPED', but I got this output:\n\n$CMD_OUTPUT_ESCAPED\n\nWhat gives? You better give me an answer I'm happy with, or my boys will give you a real nice tour of the Hudson, capisce?"}
+    {"role": "user", "content": "Hey Fat Tony! I tried running this command: '$LAST_CMD_ESCAPED', but I got this output:\n\n$CMD_OUTPUT_ESCAPED\n\n$QUERY"}
   ],
   "temperature": 0.7
 }
