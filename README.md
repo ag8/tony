@@ -17,8 +17,10 @@ tony() {
   # Execute the last command and capture the output
   CMD_OUTPUT=$(eval $LAST_CMD 2>&1)
   
+  OPTIONAL_PARAM=${1:-"DefaultValue"}
+  
   # Call the fixit.sh script with the last command and its output as arguments
-  ~/fixit.sh "$LAST_CMD" "$CMD_OUTPUT"
+  ~/fixit.sh "$LAST_CMD" "$CMD_OUTPUT" "$OPTIONAL_PARAM"
 }
 ```
 
